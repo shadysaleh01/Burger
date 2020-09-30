@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/shadysaleh01/Burger/issues"
   },
-  "homepage": "https://github.com/shadysaleh01/Burger#readme"
+  "homepage": "https://github.com/shadysaleh01/Burger#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
