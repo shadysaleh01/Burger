@@ -11,3 +11,8 @@ router.get("/", (req, res) => {
    })
 })
 
+router.post("/api/burger", (req, res) => {
+   burger.insertOne(["burger", "devoured"], [req.body.burger, req.body.devoured], (result) => {
+      res.json({ id: result.insertId })
+   })
+})
