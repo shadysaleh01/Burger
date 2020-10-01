@@ -16,6 +16,13 @@ var orm = {
          if (err) throw err
          cb(result)
       })
+   },
+   updateOne: function (tableName, column, condition, value, cb) {
+      const query = `UPDATE ${tableName} SET ${column} = ${condition} WHERE id=${value}`
+      connection.query(query, (err, result) => {
+         if (err) throw err
+         cb(result)
+      })
    }
 }
 
