@@ -28,3 +28,5 @@ router.put("/api/burger/:id", (req, res) => {
       }
    })
 })
+
+module.exports = router
