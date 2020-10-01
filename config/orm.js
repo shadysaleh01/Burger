@@ -10,7 +10,13 @@ var orm = {
          cb(result)
       })
    },
-
+   insertOne: function (burgers_name, devoured, cb) {
+      const query = "INSERT INTO burgers (burgers_name, devoured) VALUES " + (burgers_name, devoured)
+      connection.query(query, (err, result) => {
+         if (err) throw err
+         cb(result)
+      })
+   }
 }
 
 module.exports = orm
