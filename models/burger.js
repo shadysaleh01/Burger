@@ -8,10 +8,15 @@ const burger = {
       })
    },
    insertOne: function (column, value, cb) {
-      orm.insertOne("burger", column, value, cb, function (res) {
+      orm.insertOne("burger", column, value, function (res) {
+         cb(res)
+      })
+   },
+   updateOne: function (column, condition, value, cb) {
+      orm.updateOne("burger", column, condition, value, function (res) {
          cb(res)
       })
    }
-
-
 }
+
+module.exports = burger
