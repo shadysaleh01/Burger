@@ -1,17 +1,35 @@
 <h1>Eat-Da-Burger!</h1>
 
+<h2>Burger Ready to Eat</h2>
 <ul>
    {{#each burger}}
    {{#unless devoured}}
-   {{> burger/burger-block devoured=true}}
+   {{> burgers/burger-block devoured=true}}
    {{/unless}}
    {{/each}}
 </ul>
 
+<h2>Burger's You've Eaten</h2>
 <ul>
    {{#each burger}}
    {{#if devoured}}
-   {{> burger/burger-block devoured=false}}
+   {{> burgers/burger-block devoured=false}}
    {{/if}}
    {{/each}}
 </ul>
+
+<div class="card-body ml-5">
+   <div class="card text-center">
+
+      <h2 class="card-title">Add A Burger</h2>
+      <form class="create-form">
+
+         <div class="form-group">
+            <label class="font-weight-bold" for="burger">Burger Name:</label>
+            <input type="text" id="ca" name="name">
+         </div>
+         <button class="btn btn-primary" type="submit">Add Burger</button>
+      </form>
+   </div>
+
+</div>
