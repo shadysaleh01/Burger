@@ -7,7 +7,7 @@ CREATE TABLE burgers
    AUTO_INCREMENT NOT NULL,
    burger_name VARCHAR
    (250) NOT NULL,
-   devoured BOOLEAN,
+   devoured BOOLEAN DEFAULT false,
    PRIMARY KEY
    (id)
 );
