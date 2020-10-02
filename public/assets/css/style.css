@@ -2,9 +2,35 @@ body {
    background-color: bisque;
    text-align: center;
 }
-h1{
-   color: rgba(255, 230, 0, 0.637);
+.container {
+   width: 55%;
+   margin-bottom: 10%
 }
-h2{
+.p-5{
+   padding:0
+}
+h1{
    color: rgba(255, 0, 0, 0.747);
+   /* font-size: 50px; */
+}
+.h2 {
+   color: darkolivegreen;
+   margin-top: 5%;
+}
+
+li {
+   background-color: rgba(255, 255, 255, 0.884);
+   font-size: 18px;
+   padding: 5px;
+   margin: 5px;
+}
+
+.card-body {
+   background: white;
+   margin-top: 5%;
+   }
+
+.text-center{
+   color: dodgerblue;
+   padding:15px;
 }

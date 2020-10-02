@@ -15,40 +15,40 @@
    </div>
 </div> --}}
 
-<img src="/assets/image/image.png" alt="burger" height="250" width="250">
 
-<h1>Eat-Da-Burger!</h1>
+<div class="p-5 container">
+   <img src="/assets/image/image.png" alt="burger" height="250" width="300">
+   <h1>Eat-Da-Burger!</h1>
 
-<h2>Burger Ready to Eat</h2>
-<ul>
-   {{#each burger}}
-   {{#unless devoured}}
-   {{> burgers/burger-block devoured=true}}
-   {{/unless}}
-   {{/each}}
-</ul>
+   <h3 class="h2">Burger Ready to Eat</h3>
+   <ul>
+      {{#each burger}}
+      {{#unless devoured}}
+      {{> burgers/burger-block devoured=true}}
+      {{/unless}}
+      {{/each}}
+   </ul>
 
-<h2>Burger's You've Eaten</h2>
-<ul>
-   {{#each burger}}
-   {{#if devoured}}
-   {{> burgers/burger-block devoured=false}}
-   {{/if}}
-   {{/each}}
-</ul>
+   <h3 class="h2">Burger's You've Eaten</h3>
+   <ul>
+      {{#each burger}}
+      {{#if devoured}}
+      {{> burgers/burger-block devoured=false}}
+      {{/if}}
+      {{/each}}
+   </ul>
 
-<div class="card-body ml-5">
-   <div class="card text-center">
+   <div class="card-body ml-5" id="form">
+      <div class="card text-center ">
 
-      <h2 class="card-title">Add A Burger</h2>
-      <form class="create-form">
+         <h3 class="card-title">Add A Burger You Want to Eat</h3>
+         <form class="create-form">
 
-         <div class="form-group">
-            <label class="font-weight-bold" for="burger">Burger Name:</label>
-            <input type="text" id="ca" name="name">
-         </div>
-         <button class="btn btn-primary" type="submit">Add Burger</button>
-      </form>
+            <div class="form-group">
+               <input type="text" id="ca" name="name">
+            </div>
+            <button class="btn btn-primary" type="submit">Add Burger</button>
+         </form>
+      </div>
    </div>
-
 </div>
