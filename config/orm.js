@@ -1,4 +1,4 @@
-const connection = require("./connection.js")
+const connection = require("../config/connection.js")
 
 var orm = {
    selectAll: function (tableName, cb) {
@@ -9,7 +9,7 @@ var orm = {
       })
    },
    insertOne: function (tableName, column, value, cb) {
-      const query = `INSERT INTO ${tableName} (${column}) VALUES (${value})`
+      const query = `INSERT INTO ${tableName} (${column}) VALUES ("${value}")`
       connection.query(query, (err, result) => {
          if (err) throw err
          cb(result)
@@ -21,7 +21,8 @@ var orm = {
          if (err) throw err
          cb(result)
       })
-   }
+   },
+
 }
 
 module.exports = orm

@@ -1,13 +1,12 @@
-
 INSERT INTO burgers
    (burger_name, devoured)
 VALUES
-   ("Cheese Burger", true);
+   ('Cheese Burger', FALSE);
 INSERT INTO burgers
-   (burger_name, devoured)
+   (burger_name)
 VALUES
-   ("Chicken Burger", true);
+   ('Chicken Burger');
 INSERT INTO burgers
-   (burger_name, devoured)
+   (burger_name)
 VALUES
-   ("Beef Burger", true);
+   ('Beef Burger');

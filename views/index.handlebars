@@ -22,7 +22,7 @@
 
    <h3 class="h2">Burger Ready to Eat</h3>
    <ul>
-      {{#each burger}}
+      {{#each burgers}}
       {{#unless devoured}}
       {{> burgers/burger-block devoured=true}}
       {{/unless}}
@@ -31,21 +31,21 @@
 
    <h3 class="h2">Burger's You've Eaten</h3>
    <ul>
-      {{#each burger}}
+      {{#each burgers}}
       {{#if devoured}}
       {{> burgers/burger-block devoured=false}}
       {{/if}}
       {{/each}}
    </ul>
 
-   <div class="card-body ml-5" id="form">
-      <div class="card text-center ">
+   <div class="card-body ml-5">
+      <div class="card text-center">
 
          <h3 class="card-title">Add A Burger You Want to Eat</h3>
          <form class="create-form">
 
             <div class="form-group">
-               <input type="text" id="ca" name="name">
+               <input type="text" id="ca" name="burger_name">
             </div>
             <button class="btn btn-primary" type="submit">Add Burger</button>
          </form>

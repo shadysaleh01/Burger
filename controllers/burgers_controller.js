@@ -5,20 +5,22 @@ const burger = require("../models/burger.js")
 router.get("/", (req, res) => {
    burger.selectAll((data) => {
       let hbsObject = {
-         burger: data
+         burgers: data
       }
+      console.log(hbsObject)
       res.render("index", hbsObject)
    })
 })
 
-router.post("/api/burger", (req, res) => {
+router.post("/api/burgers", (req, res) => {
    const burgerName = req.body.burger_name
+   console.log(burgerName)
    burger.insertOne("burger_name", burgerName, (result) => {
       res.json({ id: result.insertId })
    })
 })
 
-router.put("/api/burger/:id", (req, res) => {
+router.put("/api/burgers/:id", (req, res) => {
    let id = req.params.id
    burger.updateOne(id, (result) => {
       if (result.changedRows == 0) {
