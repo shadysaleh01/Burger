@@ -34,4 +34,3 @@ var orm = {
 }
 
 module.exports = orm
-A
