@@ -1,5 +1,7 @@
+// Import MySQL connection.
 const connection = require("../config/connection.js")
 
+// Object for all our SQL statement functions.
 var orm = {
    selectAll: function (tableName, cb) {
       const query = `SELECT * FROM ${tableName}`
@@ -32,5 +34,5 @@ var orm = {
       });
    }
 }
-
+// Export the orm object for the model (burger.js).
 module.exports = orm
