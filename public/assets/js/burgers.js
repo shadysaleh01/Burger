@@ -1,5 +1,7 @@
+// Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function () {
    $(".create-form").on("submit", (event) => {
+      // Make sure to preventDefault on a submit event.
       event.preventDefault()
 
       var newBurger = {
