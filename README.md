@@ -1,7 +1,7 @@
 # **Eat-Da-Burger!**
 
 * [Full Demo Video](https://drive.google.com/file/d/1PeCQZWdkWzNymlY4rNAATNsekR5JvkUb/preview)
-* [Heroku Deployment Video](https://obscure-waters-33367.herokuapp.com/)
+* [Heroku Deployment Video](https://eat-da-burger2.herokuapp.com/)
 
 ## Table of Contents
 - [Description](#description)
